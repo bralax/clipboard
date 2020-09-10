@@ -19,10 +19,9 @@ RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(setString:(NSString *)content)
 {
-  NSLog(@"%@", content);
   NSPasteboard *clipboard = [NSPasteboard generalPasteboard];
   [clipboard prepareForNewContentsWithOptions:0];
-  NSLog(@"%d",[clipboard setString:content forType:NSPasteboardTypeString]);
+  [clipboard setString:content forType:NSPasteboardTypeString];
 }
 
 
